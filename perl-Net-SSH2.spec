@@ -4,13 +4,13 @@
 #
 Name     : perl-Net-SSH2
 Version  : 0.70
-Release  : 1
+Release  : 2
 URL      : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-SSH2-0.70.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-SSH2-0.70.tar.gz
 Summary  : 'Support for the SSH 2 protocol via libssh2.'
 Group    : Development/Tools
 License  : Artistic-1.0-Perl
-Requires: perl-Net-SSH2-lib = %{version}-%{release}
+Requires: perl-Net-SSH2-perl = %{version}-%{release}
 Requires: libssh2
 BuildRequires : buildreq-cpan
 BuildRequires : libssh2
@@ -23,7 +23,6 @@ Net::SSH2 - Secure Shell protocol interface
 %package dev
 Summary: dev components for the perl-Net-SSH2 package.
 Group: Development
-Requires: perl-Net-SSH2-lib = %{version}-%{release}
 Provides: perl-Net-SSH2-devel = %{version}-%{release}
 Requires: perl-Net-SSH2 = %{version}-%{release}
 
@@ -31,16 +30,18 @@ Requires: perl-Net-SSH2 = %{version}-%{release}
 dev components for the perl-Net-SSH2 package.
 
 
-%package lib
-Summary: lib components for the perl-Net-SSH2 package.
-Group: Libraries
+%package perl
+Summary: perl components for the perl-Net-SSH2 package.
+Group: Default
+Requires: perl-Net-SSH2 = %{version}-%{release}
 
-%description lib
-lib components for the perl-Net-SSH2 package.
+%description perl
+perl components for the perl-Net-SSH2 package.
 
 
 %prep
 %setup -q -n Net-SSH2-0.70
+cd %{_builddir}/Net-SSH2-0.70
 
 %build
 export http_proxy=http://127.0.0.1:9/
@@ -76,15 +77,6 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Net/SSH2.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Net/SSH2/Channel.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Net/SSH2/Constants.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Net/SSH2/Dir.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Net/SSH2/File.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Net/SSH2/KnownHosts.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Net/SSH2/Listener.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Net/SSH2/PublicKey.pm
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/Net/SSH2/SFTP.pm
 
 %files dev
 %defattr(-,root,root,-)
@@ -97,6 +89,15 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 /usr/share/man/man3/Net::SSH2::PublicKey.3
 /usr/share/man/man3/Net::SSH2::SFTP.3
 
-%files lib
+%files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.28.2/x86_64-linux-thread-multi/auto/Net/SSH2/SSH2.so
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/Channel.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/Constants.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/Dir.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/File.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/KnownHosts.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/Listener.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/PublicKey.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/SFTP.pm
+/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Net/SSH2/SSH2.so
