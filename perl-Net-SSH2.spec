@@ -4,7 +4,7 @@
 #
 Name     : perl-Net-SSH2
 Version  : 0.70
-Release  : 2
+Release  : 3
 URL      : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-SSH2-0.70.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/S/SA/SALVA/Net-SSH2-0.70.tar.gz
 Summary  : 'Support for the SSH 2 protocol via libssh2.'
@@ -91,13 +91,13 @@ find %{buildroot} -type f -name '*.bs' -empty -exec rm -f {} ';'
 
 %files perl
 %defattr(-,root,root,-)
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2.pm
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/Channel.pm
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/Constants.pm
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/Dir.pm
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/File.pm
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/KnownHosts.pm
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/Listener.pm
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/PublicKey.pm
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/Net/SSH2/SFTP.pm
-/usr/lib/perl5/vendor_perl/5.30.1/x86_64-linux-thread-multi/auto/Net/SSH2/SSH2.so
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/Net/SSH2.pm
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/Net/SSH2/Channel.pm
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/Net/SSH2/Constants.pm
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/Net/SSH2/Dir.pm
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/Net/SSH2/File.pm
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/Net/SSH2/KnownHosts.pm
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/Net/SSH2/Listener.pm
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/Net/SSH2/PublicKey.pm
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/Net/SSH2/SFTP.pm
+/usr/lib/perl5/vendor_perl/5.30.2/x86_64-linux-thread-multi/auto/Net/SSH2/SSH2.so
