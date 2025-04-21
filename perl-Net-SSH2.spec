@@ -7,7 +7,7 @@
 #
 Name     : perl-Net-SSH2
 Version  : 0.74
-Release  : 20
+Release  : 21
 URL      : https://cpan.metacpan.org/authors/id/R/RK/RKITOVER/Net-SSH2-0.74.tar.gz
 Source0  : https://cpan.metacpan.org/authors/id/R/RK/RKITOVER/Net-SSH2-0.74.tar.gz
 Summary  : 'Support for the SSH 2 protocol via libssh2.'
